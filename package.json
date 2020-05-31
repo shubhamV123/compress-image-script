@@ -1,0 +1,36 @@
+{
+  "name": "image-compression",
+  "version": "1.0.0",
+  "description": "Script to compress image before committing file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubhamV123/compress-image-script.git"
+  },
+  "keywords": [
+    "image",
+    "compress",
+    "pre-commit",
+    "git-hooks",
+    "githooks"
+  ],
+  "author": "Shubham Verma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shubhamV123/compress-image-script/issues"
+  },
+  "homepage": "https://github.com/shubhamV123/compress-image-script#readme",
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7",
+    "sharp": "^0.25.3"
+  },
+  "lint-staged": {
+    "*.{png,jpeg,jpg}": [
+      "node ./compress-image.js"
+    ]
+  }
+}
